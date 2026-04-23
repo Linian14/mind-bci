@@ -1,10 +1,13 @@
-/* 
- * Future Page — MindAI BCI
- * Sections: Video player, Timeline milestones
- */
-
+ 
 .video-section {
     padding: 4rem 0;
+    /* margin-top: 4rem; */
+}
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
 
 .video-player {
@@ -67,23 +70,6 @@
     padding: 2rem 0;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: linear-gradient(to bottom, #00ff00, rgba(0, 255, 0, 0.1));
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
-}
-
-@media (min-width: 768px) {
-    .timeline::before {
-        left: 7rem;
-    }
-}
-
 .timeline-item {
     position: relative;
     padding: 2rem 0 2rem 2rem;
@@ -95,24 +81,6 @@
         padding: 2rem 0 2rem 8rem;
     }
 }
-
-.timeline-dot {
-    position: absolute;
-    left: -4px;
-    top: 2rem;
-    width: 8px;
-    height: 8px;
-    background: #00ff00;
-    border-radius: 50%;
-    box-shadow: 0 0 12px rgba(0, 255, 0, 0.6);
-}
-
-@media (min-width: 768px) {
-    .timeline-dot {
-        left: calc(7rem - 4px);
-    }
-}
-
 .timeline-year {
     font-family: 'Syne', sans-serif;
     font-size: 1.5rem;

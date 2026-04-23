@@ -1,0 +1,160 @@
+/* 
+ * Application Page — MindAI BCI
+ * Sections: Three industry cards, Stats section
+ */
+
+.applications-section {
+    padding: 6rem 0;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.app-card {
+    background: rgba(25, 25, 35, 0.5);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: #00ff00;
+}
+
+.app-card-image {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 0, 0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 10, 15, 0.9), transparent 60%);
+}
+
+.app-card-number {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: #00ff00;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.app-card-content {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-card h3 {
+    margin-bottom: 1rem;
+    color: #f5f0e8;
+}
+
+.app-card p {
+    font-size: 0.875rem;
+    color: rgba(245, 240, 232, 0.6);
+    margin-bottom: 1.5rem;
+    flex: 1;
+    line-height: 1.6;
+}
+
+.app-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.app-tag {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    border-radius: 0.25rem;
+    color: #00ff00;
+}
+
+.app-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #00ff00;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.app-link:hover {
+    transform: translateX(4px);
+}
+
+.stats-section {
+    padding: 3rem 0;
+    background: rgba(25, 25, 35, 0.5);
+    border-top: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 0 1rem;
+}
+
+.stat-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #00ff00;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

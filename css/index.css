@@ -1,0 +1,322 @@
+/* 
+ * Home Page — MindAI BCI
+ * Sections: Hero, Stats bar, Principles, Preview cards
+ */
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin-top: 4rem;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #0a0a0f 0%, #0d1b2a 50%, #0a0a0f 100%);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(0, 255, 0, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(0, 255, 0, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.hero-label-line {
+    width: 2rem;
+    height: 1px;
+    background: #00ff00;
+}
+
+.hero-label-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #00ff00;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.hero-title .green {
+    color: #00ff00;
+    text-shadow: 0 0 30px rgba(0, 255, 0, 0.4);
+}
+
+.hero-divider {
+    width: 6rem;
+    height: 1px;
+    background: #00ff00;
+    margin: 1.5rem 0;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: rgba(245, 240, 232, 0.7);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #00ff00;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.hero-btn-secondary:hover {
+    transform: translateX(4px);
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+}
+
+/* Stats Bar */
+.stats-bar {
+    background: rgba(25, 25, 35, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 0 1rem;
+}
+
+.stat-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #00ff00;
+    margin-bottom: 0.25rem;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Principles Section */
+.principles {
+    padding: 6rem 0;
+    background: #0a0a0f;
+}
+
+.section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.section-header-content h2 {
+    margin-bottom: 0.75rem;
+}
+
+.section-header-content p {
+    font-size: 1rem;
+    color: rgba(245, 240, 232, 0.6);
+    max-width: 500px;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.principle-card {
+    background: rgba(25, 25, 35, 0.5);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    padding: 2rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.principle-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(0, 255, 0, 0.05);
+    border-color: #00ff00;
+}
+
+.principle-icon {
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    color: #00ff00;
+}
+
+.principle-card h3 {
+    margin-bottom: 0.75rem;
+    color: #f5f0e8;
+}
+
+.principle-card p {
+    font-size: 0.875rem;
+    color: rgba(245, 240, 232, 0.6);
+    line-height: 1.6;
+}
+
+/* Preview Cards */
+.preview-section {
+    padding: 6rem 0;
+    background: rgba(13, 27, 42, 0.3);
+}
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.preview-card {
+    background: rgba(25, 25, 35, 0.5);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: #00ff00;
+}
+
+.preview-card-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 0, 0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.preview-card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 10, 15, 0.8), transparent);
+}
+
+.preview-card-label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: #00ff00;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.preview-card-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-card h3 {
+    margin-bottom: 0.5rem;
+    color: #f5f0e8;
+}
+
+.preview-card p {
+    font-size: 0.875rem;
+    color: rgba(245, 240, 232, 0.6);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.preview-card-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #00ff00;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .section-header {
+        flex-direction: column;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

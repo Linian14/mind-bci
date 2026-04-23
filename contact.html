@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindAI - Contact</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/shared.css">
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-icon">🧠</div>
+            <div class="logo-text">Mind<span class="green">AI</span></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="application.html">Application</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="future.html">Future</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-label">
+                <div class="page-header-label-line"></div>
+                <span class="page-header-label-text">Contact</span>
+            </div>
+            <h1>GET IN TOUCH</h1>
+            <p>Whether you're a researcher, clinician, investor, or simply curious about BCI — we'd love to hear from
+                you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+
+                    <div class="contact-items">
+                        <a href="mailto:contact@mindai.io" class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-details">
+                                <div class="contact-label">Email</div>
+                                <div class="contact-value">contact@mindai.io</div>
+                            </div>
+                        </a>
+
+                        <a href="https://wa.me/447700900000" target="_blank" class="contact-item">
+                            <div class="contact-icon">💬</div>
+                            <div class="contact-details">
+                                <div class="contact-label">WhatsApp</div>
+                                <div class="contact-value">+44 7700 900000</div>
+                            </div>
+                        </a>
+
+                        <a href="https://linkedin.com/company/mindai" target="_blank" class="contact-item">
+                            <div class="contact-icon">🔗</div>
+                            <div class="contact-details">
+                                <div class="contact-label">LinkedIn</div>
+                                <div class="contact-value">linkedin.com/company/mindai</div>
+                            </div>
+                        </a>
+
+                        <a href="https://maps.google.com/?q=London,UK" target="_blank" class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <div class="contact-label">Location</div>
+                                <div class="contact-value">London, United Kingdom</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-signal">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    //FORM JAVASCRIPT
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const contactForm = document.getElementById("contactForm");
+
+            contactForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+
+                if (name && email && message) {
+                    alert("Message sent!");
+                    contactForm.reset();
+                } else {
+                    alert("Please fill in all fields.");
+                }
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1rem;">
+                        <div class="logo-icon">🧠</div>
+                        <div class="logo-text">Mind<span class="green">AI</span></div>
+                    </div>
+                    <p>Connecting human intelligence with artificial intelligence through cutting-edge brain-computer
+                        interface technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="application.html">Application</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="future.html">Future</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>contact@mindai.io</p>
+                    <p>London, United Kingdom</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MindAI. All rights reserved.</p>
+                <p>Brain-Computer Interface Technology</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+
+.research-section {
+    padding: 4rem 0 6rem;
+}
+
+.papers-container {
+    width: 100%;
+}
+
+.papers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.papers-count {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.paper-card {
+    background: rgba(25, 25, 35, 0.5);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    border-radius: 0.25rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.paper-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: #00ff00;
+}
+
+.paper-thumbnail {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 0, 0.05));
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.paper-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.paper-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.paper-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #00ff00;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.paper-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f5f0e8;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.paper-authors {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 0.5rem;
+}
+
+.paper-abstract {
+    font-size: 0.875rem;
+    color: rgba(245, 240, 232, 0.6);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.paper-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #00ff00;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.paper-link:hover {
+    transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+    .paper-card {
+        grid-template-columns: 1fr;
+    }
+
+    .paper-thumbnail {
+        display: none;
+    }
+}
